@@ -1,0 +1,32 @@
+{
+  "owner": "Ali Nebi ER",
+  "global_rest_time_minutes": 5,
+  "smart_video_detection": true,
+  "check_interval_seconds": 1,
+  "apps": [
+    {
+      "process_name": "chrome.exe",
+      "time_limit_minutes": 45,
+      "description": "Tarayici odak siniri",
+      "window_keywords": ["chrome", "google chrome", "youtube", "reddit"]
+    },
+    {
+      "process_name": "opera.exe",
+      "time_limit_minutes": 45,
+      "description": "Opera odak siniri",
+      "window_keywords": ["opera"]
+    },
+    {
+      "process_name": "Code.exe",
+      "time_limit_minutes": 120,
+      "description": "Kodlama molasi",
+      "window_keywords": ["visual studio code", " vscode", "code"]
+    },
+    {
+      "process_name": "telegram.exe",
+      "time_limit_minutes": 30,
+      "description": "Mesajlasma molasi",
+      "window_keywords": ["telegram"]
+    }
+  ]
+}
