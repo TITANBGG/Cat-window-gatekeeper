@@ -1,65 +1,82 @@
-# Ali Focus Gatekeeper
+# 🎯 Ali Focus Gatekeeper
 
-Ali Nebi ER icin duzenlenmis masaustu odak takip uygulamasi.
+Çok mu zaman harcıyorsun Chrome'da? Reddit'te vakit mı kaybediyorsun? 
 
-Bu proje, belirlenen uygulamalarda gecen sureyi takip eder. Limit doldugunda tam ekran bir mola ekrani acar ve calismaya kisa bir ara verilmesini ister.
+**Ali Focus Gatekeeper**, seni takip edip limit dolduğunda "Dostum, mola vakti!" diye ekranı basıp hatırlatan bir asistan gibi. Yapılandırması kolay, malı, direkt iş yapıyor.
 
-## Durum
+---
 
-Bu surum kurulabilir ve calistirilabilir bir Python masaustu prototipidir. Hazir `.exe`, tray menu veya macOS paketi icermez. README bu gercek duruma gore yeniden yazildi.
+## 💡 Ne İşe Yarıyor?
 
-## Ozellikler
+- ⏱️ **App-based time tracking** → Chrome'da 45 dakika falan mı çalıştın? Uygulamayı takip ediyor
+- 🚨 **Full-screen break reminder** → Limit dolduğunda tam ekranda mola ekranı açıyor, kaçış yok
+- ⏳ **Countdown timer** → Geri sayım yapıyor, kalan zamanı gösteriyor  
+- 🎬 **Smart video skip** → YouTube/Netflix'te fullscreen'deysens mola saati sayıyor mu? Bilir, atlıyor
+- ⌨️ **Emergency exit** → Acil çıkış: `Ctrl + Shift + Q` (zaruri hallerde işe yarar)
 
-- Proje sahibi bilgisi: Ali Nebi ER
-- Uygulama bazli sure limitleri
-- Config tabanli pencere basligi eslestirme
-- Tam ekran mola ekrani
-- Geri sayim sayaci
-- Acil cikis kisayolu: `Ctrl + Shift + Q`
-- YouTube/Netflix gibi video basliklari icin basit akilli atlama
+---
 
-## Kurulum
+## 🚀 Nasıl Başlayacağım?
 
-Bu klasorde sanal ortam hazirlandi. Yeniden kurmak gerekirse:
+### 1️⃣ Kurulum
+Venv zaten hazır, ama temiz kurmak istersen:
 
-```bat
-C:\Users\AliNebiER\AppData\Local\Python\bin\python.exe -m venv .venv
+```batch
 .venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-## Calistirma
-
-```bat
+### 2️⃣ Çalıştırma
+```batch
 run.bat
 ```
 
-Alternatif:
-
-```bat
+ya da direkt:
+```batch
 .venv\Scripts\python.exe main.py
 ```
 
-## Ayarlar
+---
 
-Tum ayarlar `config.json` dosyasindadir.
+## ⚙️ Konfigürasyon
+
+Bütün ayarlar `config.json`'da. Örnek:
 
 ```json
 {
   "owner": "Ali Nebi ER",
   "global_rest_time_minutes": 5,
+  "check_interval_seconds": 1,
+  "smart_video_detection": true,
   "apps": [
     {
       "process_name": "chrome.exe",
       "time_limit_minutes": 45,
-      "description": "Tarayici odak siniri",
-      "window_keywords": ["chrome", "google chrome", "youtube", "reddit"]
+      "description": "Chrome çalışma süresi",
+      "window_keywords": ["chrome", "youtube", "reddit"]
     }
   ]
 }
 ```
 
-`window_keywords`, aktif pencere basliginda aranir. Bu sayede sadece sabit uygulama isimlerine bagli kalmadan Opera, VS Code, Telegram gibi programlar config uzerinden takip edilebilir.
+**window_keywords nedir?** → Pencere başlığında arama yapıyor. Mesela Opera'yı da takip etmek istersen "opera" ekle. Geniş tut, şu an biraz tembel.
 
-## Notlar
+---
 
-Windows ortaminda test edildi. Aktif pencere eslestirmesi `PyGetWindow` ile pencere basligi uzerinden yapilir; bu nedenle baslikta uygulama adi gecmeyen programlar icin `window_keywords` alanini genisletmek gerekir.
+## 📋 Gereksinimler
+
+- **Python 3.7+**
+- **PyGetWindow** → Aktif pencereyi almak için
+- **Tkinter** → UI için (zaten Python'da var)
+
+---
+
+## 🖥️ Platform Desteği
+
+✅ Windows (test edildi)  
+⚠️ Linux/Mac → Pencere başlığı alma kısmı fark ediyor, ayarla
+
+---
+
+## 💬 Not
+
+Basit bir araç. "Over-engineering" yok, "AI magic" yok. Sadece seni izleyen ve mola veren bir program. Config dosyasını kendi ihtiyacına göre eğer 😉
