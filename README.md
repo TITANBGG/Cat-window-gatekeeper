@@ -1,4 +1,9 @@
-# Ali Focus Gatekeeper
+# Focus Gatekeeper
+
+
+https://github.com/user-attachments/assets/77de563b-cfdb-4912-8fe3-3e24dcbd445c
+
+
 
 Ali Nebi ER icin duzenlenmis masaustu odak takip uygulamasi.
 
