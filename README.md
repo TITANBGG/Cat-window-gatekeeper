@@ -1,5 +1,7 @@
 # 🎯 Ali Focus Gatekeeper
 
+https://github.com/user-attachments/assets/77de563b-cfdb-4912-8fe3-3e24dcbd445c
+
 Çok mu zaman harcıyorsun Chrome'da? Reddit'te vakit mı kaybediyorsun? 
 
 **Ali Focus Gatekeeper**, seni takip edip limit dolduğunda "Dostum, mola vakti!" diye ekranı basıp hatırlatan bir asistan gibi. Yapılandırması kolay, malı, direkt iş yapıyor.
